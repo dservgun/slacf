@@ -1,0 +1,191 @@
+\documentclass[10pt,xcolor={dvipsnames}]{beamer}
+\usetheme[
+%%% option passed to the outer theme
+%    progressstyle=fixedCircCnt,   % fixedCircCnt, movingCircCnt (moving is deault)
+  ]{Feather}
+  
+% If you want to change the colors of the various elements in the theme, edit and uncomment the following lines
+
+% Change the bar colors:
+\setbeamercolor{Feather}{fg=OliveGreen!20,bg=OliveGreen!65}
+
+% Change the color of the structural elements:
+\setbeamercolor{structure}{fg=OliveGreen}
+
+% Change the frame title text color:
+\setbeamercolor{frametitle}{fg=black!5}
+
+% Change the normal text colors:
+\setbeamercolor{normal text}{fg=black!75,bg=gray!5}
+
+%% Change the block title colors
+\setbeamercolor{block title}{use=Feather,bg=Feather.fg, fg=black!90} 
+
+
+% Change the logo in the upper right circle:
+%\renewcommand{\logofile}{example-grid-100x100pt} 
+%% This is an image that comes with the LaTeX installation
+% Adjust scale of the logo w.r.t. the circle; default is 0.875
+% \renewcommand{\logoscale}{0.55}
+
+% Change the background image on the title and final page.
+% It stretches to fill the entire frame!
+% \renewcommand{\backgroundfile}{example-grid-100x100pt}
+
+%-------------------------------------------------------
+% INCLUDE PACKAGES
+%-------------------------------------------------------
+\hypersetup{
+  colorlinks,
+  allcolors=.,
+  urlcolor=blue,
+}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{adjustbox,lipsum}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{calc}
+\usepackage{colortbl}
+\usepackage{graphicx}
+\usepackage{luacode}
+\usepackage{pdfpages}
+\usepackage{smartdiagram}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{ulem}
+
+\usepackage[firstpage]{draftwatermark}
+\setbeamercolor{background canvas}{bg=}%transparent canvas
+\SetWatermarkText{Work\\In\\Progress}
+\SetWatermarkFontSize{0.5cm}
+
+\usetikzlibrary{timeline}
+\usetikzlibrary{arrows.meta}
+\tikzset{%
+  >={Latex[width=2mm,length=2mm]},
+  % Specifications for style of nodes:
+            base/.style = {rectangle, rounded corners, draw=black,
+                           minimum width=4cm, minimum height=1cm,
+                           text centered, font=\sffamily},
+  activityStarts/.style = {base, fill=blue!30},
+       startstop/.style = {base, fill=red!30},
+    activityRuns/.style = {base, fill=green!30},
+         process/.style = {base, minimum width=2.5cm, fill=orange!15,
+                           font=\ttfamily},
+  sticker/.style = {circle, draw=green, minimum width = 4cm, minimum height = 4cm, text centered, font=\sffamily}
+}
+
+% \usepackage{helvet}
+
+%% Load different font packages to use different fonts
+%% e.g. using Linux Libertine, Linux Biolinum and Inconsolata
+% \usepackage{libertine}
+% \usepackage{zi4}
+
+%% e.g. using Carlito and Caladea
+\usepackage{carlito}
+\usepackage{caladea}
+\usepackage{zi4}
+\usepackage{textcomp}
+
+
+
+%% e.g. using Venturis ADF Serif and Sans
+% \usepackage{venturis}
+
+%-------------------------------------------------------
+% DEFFINING AND REDEFINING COMMANDS
+%-------------------------------------------------------
+
+% colored hyperlinks
+\newcommand{\chref}[2]{
+  \href{#1}{{\usebeamercolor[bg]{Feather}#2}}
+}
+
+%-------------------------------------------------------
+% INFORMATION IN THE TITLE PAGE
+%-------------------------------------------------------
+
+\title[] % [] is optional - is placed on the bottom of the sidebar on every slide
+{ % is placed on the title page
+      \textbf{Sarvamangala Ganti Lago Agrio Cleanup Foundation}
+}
+
+\subtitle[Lago Agrio : Cleanup of Contamination caused by corporate negligence]
+{
+}
+
+\author[Dinkar Ganti]
+{
+  Dinkar Ganti
+  \\ Email: \href{mailto:dinkar.ganti@gmail.com}{dinkar.ganti@gmail.com}
+}
+
+\institute[]
+{%
+      \href{https://example.com}{Sarvamangala Ganti Lago Agrio Cleanup Foundation}
+}
+
+\directlua{ dofile('currentProjects.lua') }
+
+
+
+% TODO how to pass an empty parameter to fowaTable.
+
+\date{\today}
+
+%-------------------------------------------------------
+% THE BODY OF THE PRESENTATION
+%-------------------------------------------------------
+
+\begin{document}
+
+\maketitle
+%-------------------------------------------------------
+% THE TITLEPAGE
+%-------------------------------------------------------
+
+{\1% % this is the name of the PDF file for the background
+\begin{frame}[plain,noframenumbering] % the plain option removes the header from the title page, noframenumbering removes the numbering of this frame only
+  \titlepage % call the title page information from above
+\end{frame}}
+
+%-------------------------------------------------------
+\section{Introduction}
+
+\begin{frame} {Objectives}
+    \begin{itemize}
+      \item Setup a pilot project to evaluate the effectiveness of AgroRemed\textregistered for addressing the contamination in Lago Agrio; 
+      \item Setup and operationalize a local team to support the bio-remediation of contaminated land;
+      \item Setup a partnership agreement with Sarva Bio Remed to supply AgroRemed\textregistered;
+      \item Setup a cleanup protocol for each location;
+      \item Document the overall carcinogenic profile of the population to validate the impact that application of AgroRemed\textregistered is having on the community \footnote{Our assertion is that cleanup of oil will reduce the incidents of new cancer cases. We are also aware of the current load of cancer cases making it harder to observable impact in near-term}; and
+      \item Secure funding to run the organization. The funding will take into account success of the pilot program and any special pricing agreements between Sarva Bio Remed, LLC and SLACF.
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame} {Team}
+  \begin{block} {Executive Team}
+  \begin{itemize}
+      \item - Dinkar Ganti, Founding Member.
+  \end{itemize}
+  \end{block}
+  \begin{block} {Board of Advisors}
+    \begin{itemize}
+      \item Marc Lucier <TBD>
+      \item Steve Donziger TBD
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+
+{\1
+  \begin{frame}[plain,noframenumbering]
+  \finalpage{Thank you for your time!}
+  \end{frame}
+}
+
+\end{document}

@@ -1,0 +1,11 @@
+\PassOptionsToPackage{svgnames,x11names}{xcolor}
+\documentclass[tikz,margin=5pt, convert={density=600,outext=.png}]{standalone}
+\begin{document}
+\fontfamily{pzc}\selectfont
+\begin{tikzpicture}
+   \path[fill=Brown4!30!DarkGreen] (0,0) circle (1.17cm);
+   \path[fill=blue!50!black!10] (0,0) circle (2.15cm and 2.20cm);
+   \node[text=Brown4!30!DarkGreen,scale=3.5] at (-0.5,0.60) {Sgl};
+   \node[text=Brown4!30!DarkGreen,scale=3.5] at (0.30,-0.25) {Acf};
+\end{tikzpicture}
+\end{document}
